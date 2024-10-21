@@ -1,0 +1,24 @@
+{
+    "name": "fagathe/phplib",
+    "description": "Ma lib de composant PHP",
+    "default-branch": true,
+    "autoload": {
+        "psr-4": {
+            "Fagathe\\Phplib\\": "src/"
+        }
+    },
+    "minimum-stability": "beta",
+    "authors": [
+        {
+            "name": "fagathe-dev",
+            "email": "agathefrederick@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/http-foundation": "^7.1",
+        "symfony/var-dumper": "^7.1",
+        "cocur/slugify": "^4.6",
+        "fakerphp/faker": "^1.23",
+        "symfony/validator": "^7.1"
+    }
+}
