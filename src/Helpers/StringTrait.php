@@ -1,6 +1,6 @@
 <?php
 
-namespace Fagathe\Phplib\Symfony\Helpers;
+namespace Fagathe\Phplib\Helpers;
 
 trait StringTrait
 {
@@ -21,6 +21,7 @@ trait StringTrait
 
         return $string;
     }
+
     /**
      * Generate a token
      * @param integer $length
@@ -32,6 +33,7 @@ trait StringTrait
         return substr(str_shuffle($char_to_shuffle), 0, $length);
     }
 
+
     /**
      * Generate Random string token
      *
@@ -41,23 +43,5 @@ trait StringTrait
     public function generateToken(int $length = 50): string
     {
         return uniqid($this->generateShuffleChars($length), true);
-    }
-
-    /**
-     * @param string $token
-     *
-     * @return array $json_decoded_data
-     */
-    public function tokenBase64Decode(string $token): array
-    {
-        return json_decode(base64_decode($token), true);
-    }
-
-    /**
-     * @return string
-     */
-    public function generateIdentifier(string $type = "id"): string
-    {
-        return $type . '_' . uniqid($this->generateShuffleChars(10));
     }
 }

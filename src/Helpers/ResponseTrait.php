@@ -66,7 +66,6 @@ trait ResponseTrait
         if (count($violations) > 0) {
 
             foreach ($violations as $violation) {
-                // dd($violation->getPropertyPath());
                 $errors[$violation->getPropertyPath()] = $violation->getMessage();
             }
         }
