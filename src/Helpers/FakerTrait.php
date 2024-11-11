@@ -1,6 +1,6 @@
 <?php
 
-namespace Fagathe\Phplib\Symfony\Helpers;
+namespace Fagathe\Phplib\Helpers;
 
 use DateTimeImmutable;
 use Faker\Factory;
