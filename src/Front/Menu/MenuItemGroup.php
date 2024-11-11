@@ -1,13 +1,15 @@
-<?php 
-namespace App\Service\Menu;
+<?php
 
-final class MenuItemGroup {
+namespace Fagathe\Phplib\Service\Menu;
+
+final class MenuItemGroup
+{
 
     public function __construct(
         private string $label,
         /**
          * @var MenuItem[] $items
-         */ 
+         */
         private array $items,
         private bool $expanded = false,
     ) {
@@ -17,7 +19,7 @@ final class MenuItemGroup {
     /**
      * @return bool
      */
-    private function hasExpended(): void 
+    private function hasExpended(): void
     {
         foreach ($this->items as $item) {
             if ($item->isActive() === true) {
@@ -46,10 +48,10 @@ final class MenuItemGroup {
         return $this->items;
     }
 
-    public function addItem(MenuItem $item): self 
+    public function addItem(MenuItem $item): self
     {
         $this->items[] = [...$this->items, $item];
-        
+
         return $this;
     }
 
@@ -65,8 +67,7 @@ final class MenuItemGroup {
                 return $this->expanded;
             }
         }
-        
+
         return false;
     }
-
 }

@@ -1,5 +1,6 @@
 <?php
-namespace App\Service\Breadcrumb;
+
+namespace Fagathe\Phplib\Service\Breadcrumb;
 
 final class BreadcrumbItem
 {
@@ -7,8 +8,7 @@ final class BreadcrumbItem
     public function __construct(
         private string $name = '',
         private ?string $link = null
-    ) {
-    }
+    ) {}
 
 
     /**

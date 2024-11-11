@@ -1,35 +1,43 @@
-<?php 
-namespace App\Service\Menu;
-use App\Service\Menu\Menu;
+<?php
 
-final class MenuGenerator 
+namespace Fagathe\Phplib\Service\Menu;
+
+use Fagathe\Phplib\Service\Menu\Menu;
+
+final class MenuGenerator
 {
 
     public function __construct(
         private Menu $menu,
     ) {}
 
-    public function start(): string {
+    public function start(): string
+    {
         return '';
     }
 
-    public function end(): string {
+    public function end(): string
+    {
         return '';
     }
 
-    public function itemGroupStart():string {
+    public function itemGroupStart(): string
+    {
         return '';
     }
 
-    public function itemGroupMenulink():string {
+    public function itemGroupMenulink(): string
+    {
         return '';
     }
 
-    public function itemGroupEnd():string {
+    public function itemGroupEnd(): string
+    {
         return '';
     }
 
-    public function itemGroup(string $name):string {
+    public function itemGroup(string $name): string
+    {
         return '';
     }
 
@@ -38,12 +46,13 @@ final class MenuGenerator
         return '';
     }
 
-    public function item():string {
+    public function item(): string
+    {
         return '';
     }
 
-    public static function generate(): string {
+    public static function generate(): string
+    {
         return '';
     }
-
 }

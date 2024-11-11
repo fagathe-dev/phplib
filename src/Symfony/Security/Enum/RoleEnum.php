@@ -1,5 +1,6 @@
 <?php
-namespace App\Security\Enum;
+
+namespace Fagathe\Phplib\Security\Enum;
 
 enum RoleEnum: string
 {
@@ -116,5 +117,4 @@ enum RoleEnum: string
 
         return array_unique($choices);
     }
-
 }

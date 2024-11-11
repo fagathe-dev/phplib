@@ -1,17 +1,19 @@
-<?php 
-namespace App\Service\Menu;
+<?php
+
+namespace Fagathe\Phplib\Service\Menu;
 
 use Symfony\Component\HttpFoundation\Request;
 
-final class MenuItem {
+final class MenuItem
+{
 
     private ?Request $request = null;
 
     public function __construct(
-        private string $label, 
-        private string $url, 
+        private string $label,
+        private string $url,
         private bool $isActive = false,
-    ){
+    ) {
         $this->initRequest();
         $this->setIsActive();
     }
@@ -19,8 +21,8 @@ final class MenuItem {
 
     /**
      * Get the value of url
-     */ 
-    public function getUrl():string
+     */
+    public function getUrl(): string
     {
         return $this->url;
     }
@@ -29,8 +31,8 @@ final class MenuItem {
      * Set the value of url
      *
      * @return  self
-     */ 
-    public function setUrl(string $url):self
+     */
+    public function setUrl(string $url): self
     {
         $this->url = $url;
 
@@ -39,7 +41,7 @@ final class MenuItem {
 
     /**
      * Get the value of label
-     */ 
+     */
     public function getLabel()
     {
         return $this->label;
@@ -47,18 +49,18 @@ final class MenuItem {
 
     /**
      * Get the value of isActive
-     */ 
-    public function setLabel(bool $label):self
+     */
+    public function setLabel(bool $label): self
     {
         $this->label = $label;
-        
+
         return $this;
     }
 
     /**
      * Get the value of isActive
-     */ 
-    public function isActive():bool
+     */
+    public function isActive(): bool
     {
         return $this->isActive;
     }
@@ -67,7 +69,7 @@ final class MenuItem {
      * Set the value of isActive
      *
      * @return  self
-     */ 
+     */
     public function setIsActive(): self
     {
         $this->isActive = $this->request->getPathInfo() === $this->url;
@@ -78,7 +80,7 @@ final class MenuItem {
     /**
      * @return self
      */
-    public function initRequest():self 
+    public function initRequest(): self
     {
         $this->request = Request::createFromGlobals();
 

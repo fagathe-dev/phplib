@@ -1,10 +1,11 @@
-<?php 
-namespace App\Service\Menu;
+<?php
 
-use App\Service\Menu\MenuItem;
-use App\Service\Menu\MenuItemGroup;
+namespace Fagathe\Phplib\Service\Menu;
 
-final class Menu 
+use Fagathe\Phplib\Service\Menu\MenuItem;
+use Fagathe\Phplib\Service\Menu\MenuItemGroup;
+
+final class Menu
 {
 
     public function __construct(
@@ -12,13 +13,12 @@ final class Menu
          * @var MenuItem|MenuItemGroup[] $items
          */
         private array $items = [],
-    ) {
-    }
+    ) {}
 
     /**
      * @return MenuItem|MenuItemGroup[]
      */
-    public function getItems(): array 
+    public function getItems(): array
     {
         return $this->items;
     }
@@ -28,7 +28,7 @@ final class Menu
      * 
      * @return self
      */
-    public function addItem(MenuItem|MenuItemGroup $item):self 
+    public function addItem(MenuItem|MenuItemGroup $item): self
     {
         $this->items = [...$this->items, $item];
 
@@ -38,9 +38,8 @@ final class Menu
     /**
      * @return string
      */
-    public function generate(): string 
+    public function generate(): string
     {
         return (new MenuGenerator($this))->generate();
     }
-
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Security;
+namespace Fagathe\Phplib\Security;
 
-use App\Repository\UserRepository;
+use Fagathe\Phplib\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -24,9 +24,7 @@ class FormLoginAuthenticator extends AbstractLoginFormAuthenticator
     public const FORM_LOGIN_ROUTE = 'app_login';
     public const DEFAULT_TARGET_PATH = 'app_login';
 
-    public function __construct(private UrlGeneratorInterface $urlGenerator, private UserRepository $userRepository)
-    {
-    }
+    public function __construct(private UrlGeneratorInterface $urlGenerator, private UserRepository $userRepository) {}
 
     /**
      * @param Request $request
@@ -51,7 +49,7 @@ class FormLoginAuthenticator extends AbstractLoginFormAuthenticator
         }
 
         return new Passport(
-            new UserBadge($username, fn (string $userIdentifier) => $this->userRepository->findByUsernameOrEmail($userIdentifier)),
+            new UserBadge($username, fn(string $userIdentifier) => $this->userRepository->findByUsernameOrEmail($userIdentifier)),
             new PasswordCredentials($password),
             $badges,
         );

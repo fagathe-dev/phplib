@@ -1,7 +1,8 @@
 <?php
-namespace App\Service\Breadcrumb;
 
-use App\Service\Breadcrumb\BreadcrumbItem;
+namespace Fagathe\Phplib\Service\Breadcrumb;
+
+use Fagathe\Phplib\Service\Breadcrumb\BreadcrumbItem;
 
 class Breadcrumb
 {
@@ -14,8 +15,7 @@ class Breadcrumb
         private bool $homePage = true,
         private ?string $separator = "/",
         private ?array $options = []
-    ) {
-    }
+    ) {}
 
 
     /**
