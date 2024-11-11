@@ -1,6 +1,6 @@
 <?php
 
-namespace Fagathe\Phplib\Security;
+namespace Fagathe\Phplib\Symfony\Security;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;

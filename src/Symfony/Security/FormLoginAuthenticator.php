@@ -1,6 +1,6 @@
 <?php
 
-namespace Fagathe\Phplib\Security;
+namespace Fagathe\Phplib\Symfony\Security;
 
 use Fagathe\Phplib\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\RedirectResponse;

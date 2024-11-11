@@ -1,6 +1,6 @@
 <?php
 
-namespace Fagathe\Phplib\Security\Enum;
+namespace Fagathe\Phplib\Symfony\Security\Enum;
 
 enum RoleEnum: string
 {
