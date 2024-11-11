@@ -1,5 +1,5 @@
 <?php
-namespace App\Twig;
+namespace Fagathe\Phplib\Symfony\Twig\Extension;
 
 use App\Entity\User;
 use Twig\Extension\AbstractExtension;
